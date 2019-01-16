@@ -9,7 +9,7 @@
       xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var mydata = JSON.parse(this.responseText);
-        document.getElementById('name').innerHTML = mydata.food[0].name + " $" + mydata.food[0].price;
+        document.getElementById('name').innerHTML = mydata.food[0].name + " $" + mydata.food[0].price + " " + mydata.food[0].kilos + " kg";
         }
       };
       xmlhttp.open("GET","bento.json",true);
