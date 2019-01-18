@@ -1,18 +1,126 @@
 <html>
   <head>
+    <style>
+      body {
+        margin:0;
+        padding:0;
+      }
+      
+      #logo {
+        width:100vw;
+        background-color:red;
+      }
+      
+      #title {
+        text-decoration:underline;
+        text-align:center;
+      }
+      
+      #food1 {
+        width:30vw;
+        height:60vh;
+        background-color:red;
+        border-radius: 25px;
+        margin-top:5vh;
+        margin-left:2vw;
+        background-size:cover;
+      }
+      
+      #food2 {
+        width:30vw;
+        height:60vh;
+        background-color:blue;
+        margin-left:34.5vw;
+        margin-top: -63.5vh;
+        border-radius: 25px;
+        background-size:cover;
+      }
+      
+      #food3 {
+        width:30vw;
+        height:60vh;
+        background-color:purple;
+        margin-left:67vw;
+        margin-top: -63.5vh;
+        border-radius: 25px;
+        background-size:cover;
+      }
+      
+      #food4 {
+        width:30vw;
+        height:60vh;
+        background-color:green;
+        margin-top:2vh;
+        margin-left:2vw;
+        border-radius: 25px;
+        background-size:cover;
+
+      }
+      
+      #food5 {
+        width:30vw;
+        height:60vh;
+        background-color:orange;
+        margin-left:34.5vw;
+        margin-top: -63.5vh;
+        border-radius: 25px;
+        background-size:cover;
+     
+      }
+      
+      #food6 {
+        width:30vw;
+        height:60vh;
+        background-color:black;
+        margin-left:67vw;
+        margin-top: -63.5vh;
+        border-radius: 25px;
+        background-size:cover;
+      }
+      
+      #add1 {
+        position:relative;
+        margin-top:50vh;
+        margin-left: 1vw;
+        float:left;
+        width: 3vw;
+        height: 6vh;
+      }
+      
+        #minus1{
+        margin-top:50vh;
+        margin-right: 1vw;
+        float:right;
+        width: 3vw;
+        height: 6vh;
+        }
+        
+      }
+    </style>
   </head>
   <body>
-    <h1 id="name"></h1>
+    <h1 id = "logo">Dim Sum 6</h1>
+    <h1 id = "title">Menu</h1>
+    <div id = "food1"><h1 id="name1">Char Siu</h1><p id ="desc1"></p><p id ="price1"></p><button id = "add1"></button><h1 id = "amount1"></h1><button id = "minus1"></button></div>
+    <div id = "food2"><h1 id="name2"></h1><p id ="desc2"></p><p id ="price2"></p><button id = "add2"></button><h1 id = "amount2"></h1><button id = "minus2"></button></div>
+    <div id = "food3"><h1 id="name3"></h1><p id ="desc3"></p><p id ="price3"></p><button id = "add3"></button><h1 id = "amount3"></h1><button id = "minus3"></button></div>
+    <div id = "food4"><h1 id="name4"></h1><p id ="desc4"></p><p id ="price4"></p><button id = "add4"></button><h1 id = "amount4"></h1><button id = "minus4"></button></div>
+    <div id = "food5"><h1 id="name5"></h1><p id ="desc5"></p><p id ="price5"></p><button id = "add5"></button><h1 id = "amount5"></h1><button id = "minus5"></button></div>
+    <div id = "food6"><h1 id="name6"></h1><p id ="desc6"></p><p id ="price6"></p><button id = "add6"></button><h1 id = "amount6"></h1><button id = "minus6"></button></div>
+    
     <script>
       var xmlhttp = new XMLHttpRequest();
 
       xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var mydata = JSON.parse(this.responseText);
-        document.getElementById('name').innerHTML = mydata.food[0].name + " $" + mydata.food[0].price + " (" + mydata.food[0].kilos + " kg)";
+        document.getElementById('name1').innerHTML = mydata.food[0].name;
+        document.getElementById('desc1').innerHTML = mydata.food[0].amount + " " + mydata.food[0].desc;
+        document.getElementById('price1').innerHTML = mydata.food[0].price;
+        document.getElementById('food1').style.backgroundImage = mydata.food[0].img;
         }
       };
-      xmlhttp.open("GET","bento.json",true);
+      xmlhttp.open("GET","foods.json",true);
       xmlhttp.send();
     </script>
   </body>

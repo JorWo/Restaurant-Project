@@ -1,0 +1,17 @@
+{
+  "food":[
+    {
+    "name":"Char Siu Bao",
+    "price":32.67,
+    "desc":"scrumptious steamed buns with char siu (roast pork) inside",
+    "amount":"3",
+    "img": "http://www.chinesefoodrecipes.cc/wp-content/uploads/2016/05/chashaobao-rezept.jpg"
+    },
+    {
+    "name":"medium crab",
+    "price":9,
+    "kilos":0.25,
+    "sides":["tears","shame", "rice"]
+    }
+  ]
+}
