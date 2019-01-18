@@ -79,20 +79,29 @@
       }
       
       #add1 {
-        position:relative;
         margin-top:50vh;
         margin-left: 1vw;
         float:left;
         width: 3vw;
         height: 6vh;
+        position:sticky;
       }
       
         #minus1{
-        margin-top:50vh;
+        margin-top:-9.5vh;
         margin-right: 1vw;
         float:right;
         width: 3vw;
         height: 6vh;
+        position:sticky;
+        
+        }
+        
+        #amount1 {
+          padding-top: 50vh;
+          padding-left:14vw;
+          position:sticky;
+          
         }
         
       }
@@ -109,6 +118,7 @@
     <div id = "food6"><h1 id="name6"></h1><p id ="desc6"></p><p id ="price6"></p><button id = "add6"></button><h1 id = "amount6"></h1><button id = "minus6"></button></div>
     
     <script>
+      document.getElementById("amount1").innerHTML = 0;
       var xmlhttp = new XMLHttpRequest();
 
       xmlhttp.onreadystatechange = function() {
@@ -116,7 +126,7 @@
         var mydata = JSON.parse(this.responseText);
         document.getElementById('name1').innerHTML = mydata.food[0].name;
         document.getElementById('desc1').innerHTML = mydata.food[0].amount + " " + mydata.food[0].desc;
-        document.getElementById('price1').innerHTML = "$" + mydata.food[0].price;
+        document.getElementById('price1').innerHTML = mydata.food[0].price;
         document.getElementById('food1').style.backgroundImage = mydata.food[0].img;
         }
       };
