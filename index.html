@@ -117,7 +117,7 @@
         document.getElementById('name1').innerHTML = mydata.food[0].name;
         document.getElementById('desc1').innerHTML = mydata.food[0].amount + " " + mydata.food[0].desc;
         document.getElementById('price1').innerHTML = "$" + mydata.food[0].price;
-        document.getElementById('food1').style.backgroundImage = url(mydata.food[0].img);
+        document.getElementById('food1').style.backgroundImage = "url(mydata.food[0].img)";
         }
       };
       xmlhttp.open("GET","foods.json",true);
