@@ -4,6 +4,8 @@
       body {
         margin:0;
         padding:0;
+        background-image: url('http://www.thecutlerychronicles.com/wp-content/uploads/2018/04/Chinatown-London-Pig-Pastry-1.gif');
+        background-size:cover;
       }
       
       #logo {
@@ -14,12 +16,13 @@
       #title {
         text-decoration:underline;
         text-align:center;
+        color: yellow;
       }
       
       #food1 {
         width:30vw;
         height:60vh;
-        background-color:red;
+        background-color:rgba(255, 255, 255, 0.8);
         border-radius: 25px;
         margin-top:5vh;
         margin-left:2vw;
@@ -29,7 +32,7 @@
       #food2 {
         width:30vw;
         height:60vh;
-        background-color:blue;
+        background-color:rgba(255, 255, 255, 0.8);
         margin-left:34.5vw;
         margin-top: -63.5vh;
         border-radius: 25px;
@@ -39,7 +42,7 @@
       #food3 {
         width:30vw;
         height:60vh;
-        background-color:purple;
+        background-color:rgba(255, 255, 255, 0.8);
         margin-left:67vw;
         margin-top: -63.5vh;
         border-radius: 25px;
@@ -49,7 +52,7 @@
       #food4 {
         width:30vw;
         height:60vh;
-        background-color:green;
+        background-color:rgba(255, 255, 255, 0.8);
         margin-top:2vh;
         margin-left:2vw;
         border-radius: 25px;
@@ -60,7 +63,7 @@
       #food5 {
         width:30vw;
         height:60vh;
-        background-color:orange;
+        background-color:rgba(255, 255, 255, 0.8);
         margin-left:34.5vw;
         margin-top: -63.5vh;
         border-radius: 25px;
@@ -70,7 +73,7 @@
       #food6 {
         width:30vw;
         height:60vh;
-        background-color:black;
+        background-color:rgba(255, 255, 255, 0.8);
         margin-left:67vw;
         margin-top: -63.5vh;
         border-radius: 25px;
@@ -137,8 +140,10 @@
       }
       
       function food1minus() {
+        if (quantity1 !== 0) {
         quantity1--;
         document.getElementById("amount1").innerHTML = quantity1;
+      }
       }
     </script>
   </body>
