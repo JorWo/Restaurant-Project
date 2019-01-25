@@ -6,6 +6,7 @@
         padding:0;
         background-image: url('http://www.thecutlerychronicles.com/wp-content/uploads/2018/04/Chinatown-London-Pig-Pastry-1.gif');
         background-size:cover;
+        font-family: 'Arial';
       }
       
       #logo {
@@ -20,63 +21,77 @@
       }
       
       #food1 {
-        width:30vw;
-        height:60vh;
+        width:15vw;
+        height:80vh;
         background-color:rgba(255, 255, 255, 0.8);
-        border-radius: 25px;
+        border-bottom-left-radius: 50px 20px;
+        border-bottom-right-radius: 50px 20px;
         margin-top:5vh;
         margin-left:2vw;
         background-size:cover;
       }
       
+      #image1 {
+        
+        width: 13vw;
+        height: 26vh;
+        background-size:cover;
+        margin-left: 1vw;
+      }
+      
       #food2 {
-        width:30vw;
-        height:60vh;
+        width:15vw;
+        height:80vh;
         background-color:rgba(255, 255, 255, 0.8);
-        margin-left:34.5vw;
-        margin-top: -63.5vh;
-        border-radius: 25px;
+        margin-left:18vw;
+        margin-top: -83vh;
+        border-bottom-left-radius: 50px 20px;
+        border-bottom-right-radius: 50px 20px;
         background-size:cover;
       }
       
       #food3 {
-        width:30vw;
-        height:60vh;
+        width:15vw;
+        height:80vh;
         background-color:rgba(255, 255, 255, 0.8);
-        margin-left:67vw;
-        margin-top: -63.5vh;
-        border-radius: 25px;
+        margin-left:34vw;
+        margin-top: -83vh;
+        border-bottom-left-radius: 50px 20px;
+        border-bottom-right-radius: 50px 20px;
         background-size:cover;
       }
       
       #food4 {
-        width:30vw;
-        height:60vh;
+        width:15vw;
+        height:80vh;
         background-color:rgba(255, 255, 255, 0.8);
-        margin-top:2vh;
-        margin-left:2vw;
-        border-radius: 25px;
+        margin-top:-83vh;
+        margin-left:50vw;
+        border-bottom-left-radius: 50px 20px;
+        border-bottom-right-radius: 50px 20px;
         background-size:cover;
 
       }
       
       #food5 {
-        width:30vw;
-        height:60vh;
+        width:15vw;
+        height:80vh;
         background-color:rgba(255, 255, 255, 0.8);
-        margin-left:34.5vw;
-        margin-top: -63.5vh;
-        border-radius: 25px;
+        margin-left:66vw;
+        margin-top: -83vh;
+        border-bottom-left-radius: 50px 20px;
+        border-bottom-right-radius: 50px 20px;
         background-size:cover;
       }
       
       #food6 {
-        width:30vw;
-        height:60vh;
+        width:15vw;
+        height:80vh;
         background-color:rgba(255, 255, 255, 0.8);
-        margin-left:67vw;
-        margin-top: -63.5vh;
-        border-radius: 25px;
+        margin-left:82vw;
+        margin-top: -83vh;
+        border-bottom-left-radius: 50px 20px;
+        border-bottom-right-radius: 50px 20px;
         background-size:cover;
       }
       
@@ -110,7 +125,7 @@
   <body>
     <h1 id = "logo">Dim Sum 6</h1>
     <h1 id = "title">Menu</h1>
-    <div id = "food1"><h1 id="name1"></h1><p id ="desc1"></p><p id ="price1"></p><button id = "minus1" onclick=food1minus()></button><h1 id = "amount1"></h1><button id = "add1" onclick =food1add()></button></div>
+    <div id = "food1"><h1 id="name1"></h1><div id = image1></div><p id ="desc1"></p><p id ="price1"></p><button id = "minus1" onclick=food1minus()></button><h1 id = "amount1"></h1><button id = "add1" onclick =food1add()></button></div>
     <div id = "food2"><h1 id="name2"></h1><p id ="desc2"></p><p id ="price2"></p><button id = "add2"></button><h1 id = "amount2"></h1><button id = "minus2"></button></div>
     <div id = "food3"><h1 id="name3"></h1><p id ="desc3"></p><p id ="price3"></p><button id = "add3"></button><h1 id = "amount3"></h1><button id = "minus3"></button></div>
     <div id = "food4"><h1 id="name4"></h1><p id ="desc4"></p><p id ="price4"></p><button id = "add4"></button><h1 id = "amount4"></h1><button id = "minus4"></button></div>
@@ -128,7 +143,7 @@
         document.getElementById('name1').innerHTML = mydata.food[0].name;
         document.getElementById('desc1').innerHTML = mydata.food[0].amount + " " + mydata.food[0].desc;
         document.getElementById('price1').innerHTML = mydata.food[0].price;
-        document.getElementById('food1').style.backgroundImage = mydata.food[0].img;
+        document.getElementById('image1').style.backgroundImage = mydata.food[0].img;
         }
       };
       xmlhttp.open("GET","foods.json",true);
