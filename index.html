@@ -32,7 +32,6 @@
       }
       
       #image1 {
-        
         width: 13vw;
         height: 26vh;
         background-size:cover;
@@ -96,25 +95,25 @@
       }
       
       #minus1 {
-        margin-top:50vh;
-        margin-left: 1vw;
-        width: 3vw;
-        height: 6vh;
+        margin-top:260px;
+        margin-left: 7px;
+        width: 40px;
+        height: 40px;
         position:relative;
       }
       
         #add1{
-        margin-top:-9.5vh;
-        margin-left: 26vw;
-        width: 3vw;
-        height: 6vh;
+        margin-top: -68px;
+        margin-left: 155px;
+        width: 40px;
+        height: 40px;
         position:relative;
         
         }
         
         #amount1 {
           margin-top: -5vh;
-          padding-left:14vw;
+          margin-left:7vw;
         
           
         }
@@ -142,7 +141,7 @@
         var mydata = JSON.parse(this.responseText);
         document.getElementById('name1').innerHTML = mydata.food[0].name;
         document.getElementById('desc1').innerHTML = mydata.food[0].amount + " " + mydata.food[0].desc;
-        document.getElementById('price1').innerHTML = mydata.food[0].price;
+        document.getElementById('price1').innerHTML = "$" + mydata.food[0].price;
         document.getElementById('image1').style.backgroundImage = mydata.food[0].img;
         }
       };
