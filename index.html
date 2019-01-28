@@ -1,6 +1,9 @@
 <html>
   <head>
-    <style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<style>
       body {
         margin:0;
         padding:0;
@@ -24,14 +27,13 @@
         width:15vw;
         height:80vh;
         background-color:rgba(255, 255, 255, 0.8);
-        margin-top:8vh;
+        margin-top:4vh;
         margin-left:2vw;
         background-size:cover;
         border-bottom-left-radius: 50px 20px;
         border-bottom-right-radius: 50px 20px;
       }
 
-      
       #image1 {
         width: 180px;
         height: 180px;
@@ -39,18 +41,66 @@
         margin-left: 1vw;
       }
       
+      #minus1 {
+        margin-top:-56px;
+        margin-left: 35px;
+        width: 40px;
+        height: 40px;
+        position:relative;
+      }
+      
+        #add1{
+        margin-top: -60px;
+        margin-left: 186px;
+        width: 40px;
+        height: 40px;
+        position:relative;
+        }
+        
+        #amount1 {
+          margin-top: -55px;
+          margin-left:126px;
+        }
       
       #food2 {
         width:15vw;
         height:80vh;
         background-color:rgba(255, 255, 255, 0.8);
         margin-left:18vw;
-        margin-top: -69vh;
+        margin-top: -84vh;
         border-bottom-left-radius: 50px 20px;
         border-bottom-right-radius: 50px 20px;
         background-size:cover;
       }
       
+      #image2 {
+        width: 180px;
+        height: 180px;
+        background-size:cover;
+        margin-left: 1vw;
+      }
+      
+      #minus2 {
+        margin-top:-55px;
+        margin-left: 254px;
+        width: 40px;
+        height: 40px;
+        position:relative;
+      }
+      
+        #add2{
+        margin-top: -60px;
+        margin-left: 403px;
+        width: 40px;
+        height: 40px;
+        position:relative;
+        }
+        
+        #amount2 {
+          margin-top: -55px;
+          margin-left:345px;
+        }
+        
       #food3 {
         width:15vw;
         height:80vh;
@@ -96,29 +146,8 @@
         background-size:cover;
       }
       
-      #minus1 {
-        margin-top:-60px;
-        margin-left: 35px;
-        width: 40px;
-        height: 40px;
-        position:relative;
-      }
       
-        #add1{
-        margin-top: -60px;
-        margin-left: 186px;
-        width: 40px;
-        height: 40px;
-        position:relative;
         
-        }
-        
-        #amount1 {
-          margin-top: -60px;
-          margin-left:126px;
-        
-          
-        }
         
       }
     </style>
@@ -127,15 +156,20 @@
     <h1 id = "logo">Dim Sum 6</h1>
     <h1 id = "title">Menu</h1>
     <div id = "food1"><h1 id="name1"></h1><div id = image1></div><p id ="desc1"></p><p id ="price1"></p></div><button id = "minus1" onclick=food1minus()></button><h1 id = "amount1"></h1><button id = "add1" onclick =food1add()></button>
-    <div id = "food2"><h1 id="name2"></h1><p id ="desc2"></p><p id ="price2"></p><button id = "add2"></button><h1 id = "amount2"></h1><button id = "minus2"></button></div>
+    
+    <div id = "food2"><h1 id="name2"></h1><div id = image2></div><p id ="desc2"></p><p id ="price2"></p></div><button id = "minus2" onclick=food2minus()></button><h1 id = "amount2"></h1><button id = "add2" onclick=food2add()></button>
+    
     <div id = "food3"><h1 id="name3"></h1><p id ="desc3"></p><p id ="price3"></p><button id = "add3"></button><h1 id = "amount3"></h1><button id = "minus3"></button></div>
     <div id = "food4"><h1 id="name4"></h1><p id ="desc4"></p><p id ="price4"></p><button id = "add4"></button><h1 id = "amount4"></h1><button id = "minus4"></button></div>
     <div id = "food5"><h1 id="name5"></h1><p id ="desc5"></p><p id ="price5"></p><button id = "add5"></button><h1 id = "amount5"></h1><button id = "minus5"></button></div>
     <div id = "food6"><h1 id="name6"></h1><p id ="desc6"></p><p id ="price6"></p><button id = "add6"></button><h1 id = "amount6"></h1><button id = "minus6"></button></div>
     
     <script>
+  
       var quantity1 = 0;
+      var quantity2 = 0;
       document.getElementById("amount1").innerHTML = quantity1;
+      document.getElementById("amount2").innerHTML = quantity2;
       var xmlhttp = new XMLHttpRequest();
 
       xmlhttp.onreadystatechange = function() {
@@ -159,6 +193,18 @@
         if (quantity1 !== 0) {
         quantity1--;
         document.getElementById("amount1").innerHTML = quantity1;
+      }
+      }
+      
+      function food2add() {
+        quantity2++;
+        document.getElementById("amount2").innerHTML = quantity2;
+      }
+      
+      function food2minus() {
+        if (quantity2 !== 0) {
+        quantity2--;
+        document.getElementById("amount2").innerHTML = quantity2;
       }
       }
     </script>
