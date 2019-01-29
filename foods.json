@@ -2,14 +2,14 @@
   "food":[
     {
     "name":"Cha Siu Bao",
-    "price":6.00,
+    "price":3.95,
     "desc":"scrumptious steamed buns with char siu (roast pork) inside",
     "amount":"3",
     "img": "url('http://www.chinesefoodrecipes.cc/wp-content/uploads/2016/05/chashaobao-rezept.jpg')"
     },
     {
     "name":"Lao Mai Gai",
-    "price":9,
+    "price":5.00,
     "desc":"",
     "amount":"1",
     "img": "url('https://thewoksoflife.com/wp-content/uploads/2014/04/sticky-rice-lotus-leaf-22.jpg')"
