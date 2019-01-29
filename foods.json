@@ -8,10 +8,11 @@
     "img": "url('http://www.chinesefoodrecipes.cc/wp-content/uploads/2016/05/chashaobao-rezept.jpg')"
     },
     {
-    "name":"medium crab",
+    "name":"Lao Mai Gai",
     "price":9,
-    "kilos":0.25,
-    "sides":["tears","shame", "rice"]
+    "desc":"",
+    "amount":"1",
+    "img": "url('https://thewoksoflife.com/wp-content/uploads/2014/04/sticky-rice-lotus-leaf-22.jpg')"
     }
   ]
 }
