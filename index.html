@@ -51,6 +51,7 @@
         text-decoration:underline;
         text-align:center;
         color: yellow;
+        font-family:rubik;
       }
       
       #food1 {
@@ -70,8 +71,15 @@
         height: 35%;
         background-size:cover;
         margin-left: 1vw;
+        position:absolute
       }
       
+      #desc1 {
+        position:absolute
+      }
+      #price1{
+        position:absolute
+      }
       
       
       #minus1 {
@@ -358,7 +366,12 @@
           text-align:center;
         }
       
-        
+        #buttonWrap1 {
+          width:100%;
+          margin-left:0%;
+          margin-top:0%;
+          position:relative;
+        }
         
       }
     </style>
@@ -373,8 +386,11 @@
       <div id = "image1"></div>
       <p id ="desc1"></p>
       <p id ="price1"></p>
+      <div id ="buttonWrap1">
       <button id = "minus1" onclick=food1minus()></button><h1 id = "amount1"></h1><button id = "add1" onclick =food1add()></button>
+      </div>
     </div>
+    
     
     <div id = "food2">
       <h1 id="name2"></h1>
