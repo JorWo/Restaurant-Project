@@ -458,7 +458,7 @@
     </div>
     <button id = "minus6" onclick=food6minus()></button><h1 id = "amount6"></h1><button id = "add6" onclick =food6add()></button>
     
-    <div id = "theOrder"><p>Your order</p><p id = "food1order"></p></div>
+    <div id = "theOrder"><p>Your order</p><p id = "food1order"></p><p id = "food2order"></p></div>
     <button id = "finalOrder">Proceed with Order</button>
     
     <script>
@@ -487,7 +487,9 @@
         document.getElementById('desc1').innerHTML = mydata.food[0].amount + " " + mydata.food[0].desc;
         document.getElementById('price1').innerHTML = "$" + mydata.food[0].price;
         document.getElementById('image1').style.backgroundImage = mydata.food[0].img;
-      
+        
+        var food2name = mydata.food[0].name;
+        window.food2name = food2name;
         document.getElementById('name2').innerHTML = mydata.food[1].name;
         document.getElementById('desc2').innerHTML = mydata.food[1].amount + " " + mydata.food[1].desc;
         document.getElementById('price2').innerHTML = "$" + mydata.food[1].price;
@@ -516,12 +518,16 @@
       function food2add() {
         quantity2++;
         document.getElementById("amount2").innerHTML = quantity2;
+        if (quantity2 => 1) {
+        document.getElementById('food2order').innerHTML = quantity2 + " x " + food2name;
+        }
       }
       
       function food2minus() {
         if (quantity2 !== 0) {
         quantity2--;
         document.getElementById("amount2").innerHTML = quantity2;
+        document.getElementById('food2order').innerHTML = quantity2 + " x " + food2name;
       }
       }
       
