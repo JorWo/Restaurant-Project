@@ -475,13 +475,14 @@
       document.getElementById("amount4").innerHTML = quantity4;
       document.getElementById("amount5").innerHTML = quantity5;
       document.getElementById("amount6").innerHTML = quantity6;
+      
       var xmlhttp = new XMLHttpRequest();
-      
-      
       xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var mydata = JSON.parse(this.responseText);
+        
         var food1name = mydata.food[0].name;
+        window.food1name = food1name;
         document.getElementById('name1').innerHTML = mydata.food[0].name;
         document.getElementById('desc1').innerHTML = mydata.food[0].amount + " " + mydata.food[0].desc;
         document.getElementById('price1').innerHTML = "$" + mydata.food[0].price;
@@ -496,7 +497,7 @@
       xmlhttp.open("GET","foods.json",true);
       xmlhttp.send();
       
-      var food1name;
+      
       function food1add() {
         quantity1++;
         document.getElementById("amount1").innerHTML = quantity1;
