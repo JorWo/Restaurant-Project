@@ -503,8 +503,7 @@
       xmlhttp.open("GET","foods.json",true);
       xmlhttp.send();
       
-      var allThePrices = (quantity1 * food1price) + (quantity2 * food2price);
-      var allThePricesPlusTax = (tax*(allThePrices)) + allThePrices;
+      var allThePrices = tax*((quantity1 * food1price) + (quantity2 * food2price)).toFixed(2);
       
       function food1add() {
         quantity1++;
@@ -512,7 +511,7 @@
         if (quantity1 => 1) {
           document.getElementById('food1order').innerHTML = quantity1 + " x " + food1name;
         }
-        document.getElementById('totalPrice').innerHTML = tax*quantity1*food1price;
+        document.getElementById('totalPrice').innerHTML = "Total Price: $"+allThePrices;
       }
       
       function food1minus() {
@@ -521,7 +520,7 @@
         document.getElementById("amount1").innerHTML = quantity1;
         document.getElementById('food1order').innerHTML = quantity1 + " x " + food1name;
       }
-      document.getElementById('totalPrice').innerHTML = tax*quantity1*food1price;
+      document.getElementById('totalPrice').innerHTML = "Total Price: $"+allThePrices;
       }
       
       function food2add() {
@@ -530,6 +529,7 @@
         if (quantity2 => 1) {
         document.getElementById('food2order').innerHTML = quantity2 + " x " + food2name;
         }
+        document.getElementById('totalPrice').innerHTML = "Total Price: $"+allThePrices;
       }
       
       function food2minus() {
@@ -538,6 +538,7 @@
         document.getElementById("amount2").innerHTML = quantity2;
         document.getElementById('food2order').innerHTML = quantity2 + " x " + food2name;
       }
+      document.getElementById('totalPrice').innerHTML = "Total Price: $"+allThePrices;
       }
       
       function food3add() {
