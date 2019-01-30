@@ -476,10 +476,12 @@
       document.getElementById("amount5").innerHTML = quantity5;
       document.getElementById("amount6").innerHTML = quantity6;
       var xmlhttp = new XMLHttpRequest();
-
+      var food1name;
+      
       xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var mydata = JSON.parse(this.responseText);
+        var food1name = mydata.food[0].name;
         document.getElementById('name1').innerHTML = mydata.food[0].name;
         document.getElementById('desc1').innerHTML = mydata.food[0].amount + " " + mydata.food[0].desc;
         document.getElementById('price1').innerHTML = "$" + mydata.food[0].price;
@@ -489,8 +491,6 @@
         document.getElementById('desc2').innerHTML = mydata.food[1].amount + " " + mydata.food[1].desc;
         document.getElementById('price2').innerHTML = "$" + mydata.food[1].price;
         document.getElementById('image2').style.backgroundImage = mydata.food[1].img;
-        
-        
         }
       };
       xmlhttp.open("GET","foods.json",true);
@@ -501,14 +501,14 @@
         quantity1++;
         document.getElementById("amount1").innerHTML = quantity1;
         if (quantity1 => 1) {
-          document.getElementById('food1order').innerHTML = quantity1 + " x " + mydata.food[0].name;
+          document.getElementById('food1order').innerHTML = quantity1 + " x " + food1name;
         }
       }
       function food1minus() {
         if (quantity1 !== 0) {
         quantity1--;
         document.getElementById("amount1").innerHTML = quantity1;
-        document.getElementById('food1order').innerHTML = quantity1 + " x " + mydata.food[0].name;
+        document.getElementById('food1order').innerHTML = quantity1 + " x " + food1name;
       }
       }
       
