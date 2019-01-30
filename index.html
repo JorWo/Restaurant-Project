@@ -10,7 +10,7 @@
         background-image: url('http://www.thecutlerychronicles.com/wp-content/uploads/2018/04/Chinatown-London-Pig-Pastry-1.gif');
         background-size:cover;
         background-repeat:no-repeat;
-        font-family: 'Arial';
+        font-family:Arial;
         
       }
       
@@ -397,6 +397,9 @@
         height:30vh;
         margin-left:2vw;
         margin-top:78vh;
+        border-color:red;
+        border-width:4px;
+        border-style:solid;
       }
       
     </style>
@@ -455,7 +458,7 @@
     </div>
     <button id = "minus6" onclick=food6minus()></button><h1 id = "amount6"></h1><button id = "add6" onclick =food6add()></button>
     
-    <div id = "theOrder"><p>Your order</p></div>
+    <div id = "theOrder"><p>Your order</p><p id = "food1order"></p></div>
     <button id = "finalOrder">Proceed with Order</button>
     
     <script>
@@ -481,27 +484,35 @@
         document.getElementById('desc1').innerHTML = mydata.food[0].amount + " " + mydata.food[0].desc;
         document.getElementById('price1').innerHTML = "$" + mydata.food[0].price;
         document.getElementById('image1').style.backgroundImage = mydata.food[0].img;
-        
+      
         document.getElementById('name2').innerHTML = mydata.food[1].name;
         document.getElementById('desc2').innerHTML = mydata.food[1].amount + " " + mydata.food[1].desc;
         document.getElementById('price2').innerHTML = "$" + mydata.food[1].price;
         document.getElementById('image2').style.backgroundImage = mydata.food[1].img;
+        
+        function food1add() {
+        quantity1++;
+        document.getElementById("amount1").innerHTML = quantity1;
+        if (quantity1 => 1) {
+          document.getElementById('food1order').innerHTML = quantity1 + " x " + mydata.food[0].name;
+        }
+      }
+      function food1minus() {
+        if (quantity1 !== 0) {
+        quantity1--;
+        document.getElementById("amount1").innerHTML = quantity1;
+        document.getElementById('food1order').innerHTML = quantity1 + " x " + mydata.food[0].name;
+      }
+      }
         }
       };
       xmlhttp.open("GET","foods.json",true);
       xmlhttp.send();
       
-      function food1add() {
-        quantity1++;
-        document.getElementById("amount1").innerHTML = quantity1;
-      }
       
-      function food1minus() {
-        if (quantity1 !== 0) {
-        quantity1--;
-        document.getElementById("amount1").innerHTML = quantity1;
-      }
-      }
+      
+      
+      
       
       function food2add() {
         quantity2++;
