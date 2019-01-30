@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin:0;
+        padding:0;
+        background-image: url('http://www.thecutlerychronicles.com/wp-content/uploads/2018/04/Chinatown-London-Pig-Pastry-1.gif');
+        background-size:cover;
+        background-repeat:no-repeat;
+        font-family:Arial;
+      }
+      
+      #finalOrder {
+        width:50%;
+        height:95%;
+        background-color:rgba(255, 255, 255, 0.8);
+        margin-left:25%;
+        margin-top:1.5%;
+      }
+      
+      #orderReceived{
+        color:rgba(57,255,20,1);
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="finalOrder">
+      <h1 id ="orderReceived">✓ Order Received</h1>
+      <p id ="food1"></p>
+      <p id ="food2"></p>
+      <p id ="food3"></p>
+      <p id ="food4"></p>
+      <p id ="food5"></p>
+      <p id ="food6"></p>
+      <p id ="totalPrice"></p>
+    </div>
+    <script>
+    var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var mydata = JSON.parse(this.responseText);
+        
+        var food1name = mydata.food[0].name;
+        window.food1name = food1name;
+        var food1price = mydata.food[0].price;
+        window.food1price = food1price;
+        
+        var food2name = mydata.food[1].name;
+        window.food2name = food2name;
+        var food2price = mydata.food[1].price;
+        window.food2price = food2price;
+
+        }
+      };
+      xmlhttp.open("GET","foods.json",true);
+      xmlhttp.send();
+      
+      var quantity1 = localStorage.getItem("item1");
+      var quantity2 = localStorage.getItem("item2");
+      var quantity3 = localStorage.getItem("item3");
+      var quantity4 = localStorage.getItem("item4");
+      var quantity5 = localStorage.getItem("item5");
+      var quantity6 = localStorage.getItem("item6");
+      
+      document.getElementById('food1').innerHTML = quantity1 + " x " + food1name;
+      document.getElementById('food2').innerHTML = quantity2 + " x " + food2name;
+      document.getElementById('food3').innerHTML = quantity3 + " x " + food3name;
+      document.getElementById('food4').innerHTML = quantity4 + " x " + food4name;
+      document.getElementById('food5').innerHTML = quantity5 + " x " + food5name;
+      document.getElementById('food6').innerHTML = quantity6 + " x " + food6name;
+      
+      </script>
+  </body>
+</html>
