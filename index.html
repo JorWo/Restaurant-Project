@@ -476,7 +476,7 @@
       document.getElementById("amount5").innerHTML = quantity5;
       document.getElementById("amount6").innerHTML = quantity6;
       var xmlhttp = new XMLHttpRequest();
-      var food1name;
+      
       
       xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -496,7 +496,7 @@
       xmlhttp.open("GET","foods.json",true);
       xmlhttp.send();
       
-      
+      var food1name;
       function food1add() {
         quantity1++;
         document.getElementById("amount1").innerHTML = quantity1;
