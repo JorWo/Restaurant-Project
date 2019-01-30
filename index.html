@@ -490,7 +490,14 @@
         document.getElementById('price2').innerHTML = "$" + mydata.food[1].price;
         document.getElementById('image2').style.backgroundImage = mydata.food[1].img;
         
-        function food1add() {
+        
+        }
+      };
+      xmlhttp.open("GET","foods.json",true);
+      xmlhttp.send();
+      
+      
+      function food1add() {
         quantity1++;
         document.getElementById("amount1").innerHTML = quantity1;
         if (quantity1 => 1) {
@@ -504,15 +511,6 @@
         document.getElementById('food1order').innerHTML = quantity1 + " x " + mydata.food[0].name;
       }
       }
-        }
-      };
-      xmlhttp.open("GET","foods.json",true);
-      xmlhttp.send();
-      
-      
-      
-      
-      
       
       function food2add() {
         quantity2++;
