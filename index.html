@@ -540,7 +540,7 @@
         document.getElementById("amount2").innerHTML = quantity2;
         if (quantity2 => 1) {
         var foodWithAmount2 = document.getElementById('food2order').innerHTML = quantity2 + " x " + food2name;
-        localStorage.setItem('item1',foodWithAmount2);
+        localStorage.setItem('item2',foodWithAmount2);
         }
         document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price))).toFixed(2);
       }
@@ -550,7 +550,7 @@
         quantity2--;
         document.getElementById("amount2").innerHTML = quantity2;
         var foodWithAmount2 = document.getElementById('food2order').innerHTML = quantity2 + " x " + food2name;
-        localStorage.setItem('item1',foodWithAmount2);
+        localStorage.setItem('item2',foodWithAmount2);
       }
       document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price))).toFixed(2);
       }
@@ -604,7 +604,9 @@
       }
       
       function nextPage() {
+        if ((quantity1 + quantity2 + quantity3 + quantity4 + quantity5 + quantity6) > 0) {
         location.href="orderPage.html";
+        }
       }
       
       
