@@ -522,7 +522,6 @@
           document.getElementById('food1order').innerHTML = quantity1 + " x " + food1name;
         }
         document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price))).toFixed(2);
-        localStorage.setItem('item1',quantity1);
       }
       
       function food1minus() {
@@ -532,7 +531,6 @@
         document.getElementById('food1order').innerHTML = quantity1 + " x " + food1name;
       }
       document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price))).toFixed(2);
-      localStorage.setItem('item1',quantity1);
       }
       
       function food2add() {
@@ -542,7 +540,6 @@
         document.getElementById('food2order').innerHTML = quantity2 + " x " + food2name;
         }
         document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price))).toFixed(2);
-        localStorage.setItem('item2',quantity2);
       }
       
       function food2minus() {
@@ -552,7 +549,6 @@
         document.getElementById('food2order').innerHTML = quantity2 + " x " + food2name;
       }
       document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price))).toFixed(2);
-      localStorage.setItem('item2',quantity2);
       }
       
       function food3add() {
@@ -604,6 +600,8 @@
       }
       
       function nextPage() {
+        localStorage.setItem('item1',quantity1);
+        localStorage.setItem('item2',quantity2);
         location.href="orderPage.html";
       }
       
