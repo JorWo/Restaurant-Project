@@ -458,11 +458,11 @@
     </div>
     <button id = "minus6" onclick=food6minus()></button><h1 id = "amount6"></h1><button id = "add6" onclick =food6add()></button>
     
-    <div id = "theOrder"><p>Your order</p><p id = "food1order"></p><p id = "food2order"></p></div>
+    <div id = "theOrder"><p>Your order</p><p id = "food1order"></p><p id = "food2order"></p><p id = "totalPrice"></p></div>
     <button id = "finalOrder">Proceed with Order</button>
     
     <script>
-  
+      var tax = 1.04712;
       var quantity1 = 0;
       var quantity2 = 0;
       var quantity3 = 0;
@@ -483,6 +483,8 @@
         
         var food1name = mydata.food[0].name;
         window.food1name = food1name;
+        var food1price = mydata.food[0].price;
+        window.food1price = food1price;
         document.getElementById('name1').innerHTML = mydata.food[0].name;
         document.getElementById('desc1').innerHTML = mydata.food[0].amount + " " + mydata.food[0].desc;
         document.getElementById('price1').innerHTML = "$" + mydata.food[0].price;
@@ -490,6 +492,8 @@
         
         var food2name = mydata.food[1].name;
         window.food2name = food2name;
+        var food2price = mydata.food[1].price;
+        window.food2price = food2price;
         document.getElementById('name2').innerHTML = mydata.food[1].name;
         document.getElementById('desc2').innerHTML = mydata.food[1].amount + " " + mydata.food[1].desc;
         document.getElementById('price2').innerHTML = "$" + mydata.food[1].price;
@@ -499,6 +503,8 @@
       xmlhttp.open("GET","foods.json",true);
       xmlhttp.send();
       
+      var allThePrices = (quantity1 * food1price) + (quantity2 * food2price);
+      var allThePricesPlusTax = (tax*(allThePrices)) + allThePrices;
       
       function food1add() {
         quantity1++;
@@ -506,13 +512,16 @@
         if (quantity1 => 1) {
           document.getElementById('food1order').innerHTML = quantity1 + " x " + food1name;
         }
+        document.getElementById('totalPrice').innerHTML = tax*quantity1*food1price;
       }
+      
       function food1minus() {
         if (quantity1 !== 0) {
         quantity1--;
         document.getElementById("amount1").innerHTML = quantity1;
         document.getElementById('food1order').innerHTML = quantity1 + " x " + food1name;
       }
+      document.getElementById('totalPrice').innerHTML = tax*quantity1*food1price;
       }
       
       function food2add() {
@@ -578,6 +587,9 @@
         document.getElementById("amount6").innerHTML = quantity6;
       }
       }
+      
+      
+      
     </script>
   </body>
 </html>
