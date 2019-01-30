@@ -519,7 +519,8 @@
         quantity1++;
         document.getElementById("amount1").innerHTML = quantity1;
         if (quantity1 => 1) {
-          document.getElementById('food1order').innerHTML = quantity1 + " x " + food1name;
+          var foodWithAmount1 = document.getElementById('food1order').innerHTML = quantity1 + " x " + food1name;
+          localStorage.setItem('item1',foodWithAmount1);
         }
         document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price))).toFixed(2);
       }
@@ -529,6 +530,7 @@
         quantity1--;
         document.getElementById("amount1").innerHTML = quantity1;
         document.getElementById('food1order').innerHTML = quantity1 + " x " + food1name;
+        localStorage.setItem('item1',foodWithAmount1);
       }
       document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price))).toFixed(2);
       }
@@ -538,6 +540,7 @@
         document.getElementById("amount2").innerHTML = quantity2;
         if (quantity2 => 1) {
         document.getElementById('food2order').innerHTML = quantity2 + " x " + food2name;
+        localStorage.setItem('item1',foodWithAmount1);
         }
         document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price))).toFixed(2);
       }
@@ -547,6 +550,7 @@
         quantity2--;
         document.getElementById("amount2").innerHTML = quantity2;
         document.getElementById('food2order').innerHTML = quantity2 + " x " + food2name;
+        localStorage.setItem('item1',foodWithAmount1);
       }
       document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price))).toFixed(2);
       }
@@ -600,8 +604,6 @@
       }
       
       function nextPage() {
-        localStorage.setItem('item1',quantity1);
-        localStorage.setItem('item2',quantity2);
         location.href="orderPage.html";
       }
       
