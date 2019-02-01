@@ -549,7 +549,7 @@
           localStorage.setItem('price1',foodTotalPrice1);
         }
         document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*allPrices);
-        localStorage.setItem('totalTaxPrice',tax*allPrices);
+        localStorage.setItem('totalTaxPrice',(tax*allPrices));
       }
       
       function food1minus() {
@@ -562,7 +562,7 @@
         localStorage.setItem('price1',foodTotalPrice1);
       }
       document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*allPrices);
-      localStorage.setItem('totalTaxPrice',tax*allPrices);
+      localStorage.setItem('totalTaxPrice',(tax*allPrices));
       }
       
       function food2add() {
@@ -575,7 +575,7 @@
         localStorage.setItem('price2',foodTotalPrice2);
         }
         document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*allPrices);
-        localStorage.setItem('totalTaxPrice',tax*allPrices);
+        localStorage.setItem('totalTaxPrice',(tax*allPrices));
       }
       
       function food2minus() {
@@ -588,7 +588,7 @@
         localStorage.setItem('price2',foodTotalPrice2);
       }
       document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*allPrices);
-      localStorage.setItem('totalTaxPrice',tax*allPrices);
+      localStorage.setItem('totalTaxPrice',(tax*allPrices));
       }
       
       function food3add() {
