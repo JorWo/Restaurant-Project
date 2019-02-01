@@ -407,7 +407,18 @@
         margin-left:88vw;
         margin-top:-30.7vh;
         position:absolute;
-        
+      }
+      
+      #yourOrder {
+        font-size:20px;
+        -webkit-text-stroke: 1px black;
+        text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+       color:yellow;
       }
       
     </style>
@@ -466,7 +477,7 @@
     </div>
     <button id = "minus6" onclick=food6minus()></button><h1 id = "amount6"></h1><button id = "add6" onclick =food6add()></button>
     
-    <div id = "theOrder"><p>Your order</p>
+    <div id = "theOrder"><p id="yourOrder">Your order</p>
       <p id = "food1order"></p>
       <p id = "food2order"></p>
       <p id = "totalPrice"></p>
