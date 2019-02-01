@@ -60,7 +60,7 @@
   </head>
   <body>
     <h1 id="topbar">Dim Sum 6</h1>
-    <a href="index.html" id = "returnButton">🡠Return</a>
+    <a href="index.html" id = "returnButton" onclick="">🡠Return</a>
     <div id="finalOrder">
       <h1 id ="orderReceived">✓ Order Received</h1>
       <p id ="food1"></p>
@@ -92,6 +92,14 @@
       xmlhttp.open("GET","foods.json",true);
       xmlhttp.send();
       
+      function clearOrder() {
+        localStorage.setItem('item1',0);
+        localStorage.setItem('item2',0);
+        localStorage.setItem('item3',0);
+        localStorage.setItem('item4',0);
+        localStorage.setItem('item5',0);
+        localStorage.setItem('item6',0);
+      }
       var amount1 = localStorage.getItem("item1");
       var amount2 = localStorage.getItem("item2");
       var amount3 = localStorage.getItem("item3");
