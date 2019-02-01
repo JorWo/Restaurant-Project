@@ -534,7 +534,7 @@
         document.getElementById("amount1").innerHTML = quantity1;
         if (quantity1 => 1) {
           var foodWithAmount1 = document.getElementById('food1order').innerHTML = quantity1 + " x " + food1name;
-          var foodTotalPrice1 = "$" + (quantity1 * food1price);
+          var foodTotalPrice1 = "$" + (quantity1 * food1price).toFixed(2);
           localStorage.setItem('item1',foodWithAmount1);
           localStorage.setItem('price1',foodTotalPrice1);
         }
@@ -546,7 +546,7 @@
         quantity1--;
         document.getElementById("amount1").innerHTML = quantity1;
         var foodWithAmount1 = document.getElementById('food1order').innerHTML = quantity1 + " x " + food1name;
-        var foodTotalPrice1 = "$" + (quantity1 * food1price);
+        var foodTotalPrice1 = "$" + (quantity1 * food1price).toFixed(2);
         localStorage.setItem('item1',foodWithAmount1);
         localStorage.setItem('price1',foodTotalPrice1);
       }
@@ -558,7 +558,7 @@
         document.getElementById("amount2").innerHTML = quantity2;
         if (quantity2 => 1) {
         var foodWithAmount2 = document.getElementById('food2order').innerHTML = quantity2 + " x " + food2name;
-        var foodTotalPrice2 = "$" + (quantity2 * food2price);
+        var foodTotalPrice2 = "$" + (quantity2 * food2price).toFixed(2);
         localStorage.setItem('item2',foodWithAmount2);
         localStorage.setItem('price2',foodTotalPrice2);
         }
@@ -570,7 +570,7 @@
         quantity2--;
         document.getElementById("amount2").innerHTML = quantity2;
         var foodWithAmount2 = document.getElementById('food2order').innerHTML = quantity2 + " x " + food2name;
-        var foodTotalPrice2 = "$" + (quantity2 * food2price);
+        var foodTotalPrice2 = "$" + (quantity2 * food2price).toFixed(2);
         localStorage.setItem('item2',foodWithAmount2);
         localStorage.setItem('price2',foodTotalPrice2);
       }
