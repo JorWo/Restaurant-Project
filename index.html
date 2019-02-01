@@ -537,6 +537,8 @@
       xmlhttp.open("GET","foods.json",true);
       xmlhttp.send();
       
+      var allPrices = ((quantity1 * food1price) + (quantity2 * food2price))).toFixed(2);
+      
       function food1add() {
         quantity1++;
         document.getElementById("amount1").innerHTML = quantity1;
@@ -546,7 +548,8 @@
           localStorage.setItem('item1',foodWithAmount1);
           localStorage.setItem('price1',foodTotalPrice1);
         }
-        document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price))).toFixed(2);
+        document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*allPrices);
+        localStorage.setItem('totalTaxPrice',tax*allPrices);
       }
       
       function food1minus() {
@@ -558,7 +561,8 @@
         localStorage.setItem('item1',foodWithAmount1);
         localStorage.setItem('price1',foodTotalPrice1);
       }
-      document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price))).toFixed(2);
+      document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*allPrices);
+      localStorage.setItem('totalTaxPrice',tax*allPrices);
       }
       
       function food2add() {
@@ -570,7 +574,8 @@
         localStorage.setItem('item2',foodWithAmount2);
         localStorage.setItem('price2',foodTotalPrice2);
         }
-        document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price))).toFixed(2);
+        document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*allPrices);
+        localStorage.setItem('totalTaxPrice',tax*allPrices);
       }
       
       function food2minus() {
@@ -582,7 +587,8 @@
         localStorage.setItem('item2',foodWithAmount2);
         localStorage.setItem('price2',foodTotalPrice2);
       }
-      document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price))).toFixed(2);
+      document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*allPrices);
+      localStorage.setItem('totalTaxPrice',tax*allPrices);
       }
       
       function food3add() {
