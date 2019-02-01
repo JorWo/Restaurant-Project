@@ -22,9 +22,45 @@
         color:rgba(57,255,20,1);
         text-align:center;
       }
+      
+      #topbar {
+        width:100%;
+        background-color:red;
+        text-align:center;
+        -webkit-text-stroke: 1px black;
+        text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+        font-family:Rubik;
+        font-size:50px;
+        color:white;
+        
+      }
+      
+      #returnButton {
+        -webkit-text-stroke: 1px black;
+        text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+        font-family:Rubik;
+        font-size:40px;
+        color:yellow;
+        text-decoration:none;
+        position:absolute;
+        margin-top:-7%;
+      }
+      
     </style>
   </head>
   <body>
+    <h1 id="topbar">Dim Sum 6</h1>
+    <a href="index.html" id = "returnButton">🡠Return</a>
     <div id="finalOrder">
       <h1 id ="orderReceived">✓ Order Received</h1>
       <p id ="food1"></p>
