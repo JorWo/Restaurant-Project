@@ -410,15 +410,12 @@
       }
       
       #yourOrder {
-        font-size:20px;
-        -webkit-text-stroke: 1px black;
-        text-shadow:
-       3px 3px 0 #000,
-     -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
+        font-size:30px;
+       -webkit-text-stroke: 1px black;
+        text-decoration:underline;
        color:yellow;
+       font-family:rubik;
+       margin-top:-0.3%;
       }
       
     </style>
@@ -477,7 +474,7 @@
     </div>
     <button id = "minus6" onclick=food6minus()></button><h1 id = "amount6"></h1><button id = "add6" onclick =food6add()></button>
     
-    <div id = "theOrder"><p id="yourOrder">Your order</p>
+    <div id = "theOrder"><h1 id="yourOrder">Your order:</h1>
       <p id = "food1order"></p>
       <p id = "food2order"></p>
       <p id = "totalPrice"></p>
