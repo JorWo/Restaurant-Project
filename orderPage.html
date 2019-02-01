@@ -56,9 +56,7 @@
         margin-top:-7%;
       }
       
-      #price1, #price2, #price3, #price4, #price5, #price6 {
-        float:right;
-      }
+      
       
     </style>
   </head>
@@ -67,12 +65,12 @@
     <a href="index.html" id = "returnButton" onclick="">🡠Return</a>
     <div id="finalOrder">
       <h1 id ="orderReceived">✓ Order Received</h1>
-      <p id ="food1"></p><p id = "price1"></p>
-      <p id ="food2"></p><p id = "price2"></p>
-      <p id ="food3"></p><p id = "price3"></p>
-      <p id ="food4"></p><p id = "price4"></p>
-      <p id ="food5"></p><p id = "price5"></p>
-      <p id ="food6"></p><p id = "price6"></p>
+      <p id ="food1"></p><p id = "price1box"></p>
+      <p id ="food2"></p><p id = "price2box"></p>
+      <p id ="food3"></p><p id = "price3box"></p>
+      <p id ="food4"></p><p id = "price4box"></p>
+      <p id ="food5"></p><p id = "price5box"></p>
+      <p id ="food6"></p><p id = "price6box"></p>
       <p id ="totalPrice"></p>
     </div>
     <script>
@@ -81,28 +79,13 @@
       if (this.readyState == 4 && this.status == 200) {
         var mydata = JSON.parse(this.responseText);
         
-        var food1name = mydata.food[0].name;
-        window.food1name = food1name;
-        var food1price = mydata.food[0].price;
-        window.food1price = food1price;
-        
-        var food2name = mydata.food[1].name;
-        window.food2name = food2name;
-        var food2price = mydata.food[1].price;
-        window.food2price = food2price;
-
         }
       };
       xmlhttp.open("GET","foods.json",true);
       xmlhttp.send();
       
       function clearOrder() {
-        localStorage.setItem('item1',0);
-        localStorage.setItem('item2',0);
-        localStorage.setItem('item3',0);
-        localStorage.setItem('item4',0);
-        localStorage.setItem('item5',0);
-        localStorage.setItem('item6',0);
+        
       }
       
       var amount1 = localStorage.getItem("item1");
@@ -115,10 +98,10 @@
       document.getElementById('food1').innerHTML = amount1;
       document.getElementById('food2').innerHTML = amount2;
       
-      var price1 = localStorage.getItem("price1");
-      var price2 = localStorage.getItem("price2");
-      document.getElementById('price1').innerHTML = price1;
-      document.getElementById('price2').innerHTML = price2;
+      var food1price = localStorage.getItem("price1");
+      var food2price = localStorage.getItem("price2");
+      document.getElementById('price1box').innerHTML = food1price;
+      document.getElementById('price2box').innerHTML = food2price;
       </script>
   </body>
 </html>
