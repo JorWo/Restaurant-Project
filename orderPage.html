@@ -104,6 +104,7 @@
         localStorage.setItem('item5',0);
         localStorage.setItem('item6',0);
       }
+      
       var amount1 = localStorage.getItem("item1");
       var amount2 = localStorage.getItem("item2");
       var amount3 = localStorage.getItem("item3");
@@ -114,7 +115,10 @@
       document.getElementById('food1').innerHTML = amount1;
       document.getElementById('food2').innerHTML = amount2;
       
-      
+      var price1 = localStorage.getItem("price1");
+      var price2 = localStorage.getItem("price2");
+      document.getElementById('price1').innerHTML = price1;
+      document.getElementById('price2').innerHTML = price2;
       </script>
   </body>
 </html>
