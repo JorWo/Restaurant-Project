@@ -488,6 +488,20 @@
       document.getElementById("amount5").innerHTML = quantity5;
       document.getElementById("amount6").innerHTML = quantity6;
       
+      localStorage.setItem('item1',0);
+      localStorage.setItem('item2',0);
+      localStorage.setItem('item3',0);
+      localStorage.setItem('item4',0);
+      localStorage.setItem('item5',0);
+      localStorage.setItem('item6',0);
+      
+      localStorage.setItem('price1',0);
+      localStorage.setItem('price2',0);
+      localStorage.setItem('price3',0);
+      localStorage.setItem('price4',0);
+      localStorage.setItem('price5',0);
+      localStorage.setItem('price6',0);
+        
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
