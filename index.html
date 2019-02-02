@@ -402,12 +402,49 @@
       }
       
       #orderButton {
-        height:30vh;
-        border-radius:0vw;
-        margin-left:88vw;
-        margin-top:-30.7vh;
+        background:red;
+        color:yellow;
+        border:none;
         position:absolute;
+        display:inline-block;
+        height:30vh;
+        font-size:6vh;
+        width:15vw;
+        cursor:pointer;
+        transition:800ms ease all;
+        outline:none;
+        border-radius:0%;
+        font-family:rubik;
+        -webkit-text-stroke: 1px black;
+        margin-top:-30.5vh;
+        margin-left:82.5vw;
+        font-weight:bold;
       }
+      #orderButton:hover{
+        background:rgba(255, 255, 255, 0);
+        color:yellow;
+      }
+      #orderButton:before, #orderButton:after {
+        content:'';
+        position:absolute;
+        top:0;
+        right:0;
+        height:2px;
+        width:0;
+        background: red;
+        transition:400ms ease all;
+      }
+    #orderButton:after{
+      right:inherit;
+      top:inherit;
+      left:0;
+      bottom:0;
+    }
+    #orderButton:hover:before, #orderButton:hover:after{
+      width:100%;
+      transition:800ms ease all;
+    }
+
       
       #yourOrder {
         font-size:30px;
@@ -479,6 +516,7 @@
       <p id = "food2order"></p>
       <p id = "totalPrice"></p>
     </div>
+    
     <button id = "orderButton" onclick=nextPage()>Proceed with Order</button>
     
     <script>
