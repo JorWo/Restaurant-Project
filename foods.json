@@ -22,25 +22,25 @@
     "img": "url('https://sushivillage.online/wp-content/uploads/2017/05/Screen-Shot-2015-02-23-at-2.01.47-PM.png')"
     },
     {
-    "name":"Har gaw",
+    "name":"Har Gaw",
     "price":3.95,
     "desc":"minced shrimp dumplings",
     "amount":"3",
     "img": "url('https://tasteasianfood.com/wp-content/uploads/2017/01/sd5-250px.jpg')"
     },
     {
-    "name":"Shrimp Cheung Fun",
+    "name":"Chee Cheung Fun",
     "price":5.95,
-    "desc":"rice rolls of shrimp",
+    "desc":"rice noodle rolls filled with shrimp, topped with crispy scallions and dipped in shoyu sauce",
     "amount":"3",
-    "img": "url('http://www.chinesefoodrecipes.cc/wp-content/uploads/2016/05/chashaobao-rezept.jpg')"
+    "img": "url('http://eatwhattonight.com/wp-content/uploads/2016/08/CheeCheongFun_21.jpg')"
     },
     {
-    "name":"Dann tat",
-    "price":3.50,
-    "desc":"Pork dumplings wrapped in yellow",
+    "name":"Dan Tat",
+    "price":4.95,
+    "desc":"egg custard tarts hot, crispy and fresh out of the oven",
     "amount":"3",
-    "img": "url('http://www.chinesefoodrecipes.cc/wp-content/uploads/2016/05/chashaobao-rezept.jpg')"
+    "img": "url('https://i.pinimg.com/originals/40/7a/c1/407ac1877ac64603120378fe554b4829.jpg')"
     }
   ]
 }
