@@ -68,14 +68,17 @@
 
       }
       
-      #price1box, #price2box {
+      #price1box, #price2box, #price3box, #price4box, #price5box, #price6box {
         float:right;
-        position:absolute;
-        display:inline-block;
+        margin-top:-3vh;
+        margin-right:1vw;
+        position:relative;
       }
       
-      #totalPrice {
+      #totalPriceBox {
         float:right;
+        margin-right:-3vw;
+        position:relative;
       }
       
     </style>
@@ -86,25 +89,16 @@
 
     <div id="finalOrder">
       <h1 id ="orderReceived">✓ Order Received</h1>
-      <p id ="food1"><p id = "price1box"></p>
-      <p id ="food2"><p id = "price2box"></p>
-      <p id ="food3"><p id = "price3box"></p>
-      <p id ="food4"><p id = "price4box"></p>
-      <p id ="food5"><p id = "price5box"></p>
-      <p id ="food6"><p id = "price6box"></p>
-      <h1 id ="totalPrice"></h1>
+      <p id ="food1">1 x Char Siu Bao</p><p id = "price1box">$3.95</p>
+      <p id ="food2">1 x Lo Mai Gai</p><p id = "price2box">$4.95</p>
+      <p id ="food3">1 x Siu Mai</p><p id = "price3box">$3.50</p>
+      <p id ="food4">1 x Har Gow</p><p id = "price4box">$3.95</p>
+      <p id ="food5">1 x Chee Cheung Fun</p><p id = "price5box">$5.95</p>
+      <p id ="food6">1 x Dan Tat</p><p id = "price6box">$4.95</p>
+      <h1 id ="totalPriceBox">Total Price: $200</h1>
     </div>
     <script>
-    var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var mydata = JSON.parse(this.responseText);
-        
-        }
-      };
-      xmlhttp.open("GET","foods.json",true);
-      xmlhttp.send();
-      
+
       var amount1 = localStorage.getItem("item1");
       var amount2 = localStorage.getItem("item2");
       var amount3 = localStorage.getItem("item3");
@@ -130,6 +124,10 @@
       document.getElementById('price4box').innerHTML = food4price;
       document.getElementById('price5box').innerHTML = food5price;
       document.getElementById('price6box').innerHTML = food6price;
+      
+      var totalPrice = localStorage.getItem("totalTaxPrice");
+      document.getElementById('totalPriceBox').innerHTML = totalPrice;
+      
       </script>
   </body>
 </html>
