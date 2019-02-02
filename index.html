@@ -696,13 +696,27 @@
       function food4add() {
         quantity4++;
         document.getElementById("amount4").innerHTML = quantity4;
+        if (quantity4 => 1) {
+        var foodWithAmount4 = document.getElementById('food4order').innerHTML = quantity4 + " x " + food4name;
+        var foodTotalPrice4 = "$" + (quantity4 * food4price).toFixed(2);
+        localStorage.setItem('item4',foodWithAmount4);
+        localStorage.setItem('price4',foodTotalPrice4);
+        }
+        document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price) + (quantity3 * food3price) + (quantity4 * food4price) + (quantity5 * food5price) + (quantity6 * food6price))).toFixed(2);
+        localStorage.setItem('totalTaxPrice',(tax*((quantity1 * food1price) + (quantity2 * food2price) + (quantity3 * food3price) + (quantity4 * food4price) + (quantity5 * food5price) + (quantity6 * food6price))).toFixed(2));
       }
       
       function food4minus() {
         if (quantity4 !== 0) {
         quantity4--;
         document.getElementById("amount4").innerHTML = quantity4;
+        var foodWithAmount4 = document.getElementById('food4order').innerHTML = quantity4 + " x " + food4name;
+        var foodTotalPrice4 = "$" + (quantity4 * food4price).toFixed(2);
+        localStorage.setItem('item4',foodWithAmount4);
+        localStorage.setItem('price4',foodTotalPrice4);
       }
+       document.getElementById('totalPrice').innerHTML = "Total Price: $"+ (tax*((quantity1 * food1price) + (quantity2 * food2price) + (quantity3 * food3price) + (quantity4 * food4price) + (quantity5 * food5price) + (quantity6 * food6price))).toFixed(2);
+        localStorage.setItem('totalTaxPrice',(tax*((quantity1 * food1price) + (quantity2 * food2price) + (quantity3 * food3price) + (quantity4 * food4price) + (quantity5 * food5price) + (quantity6 * food6price))).toFixed(2));
       }
       
       function food5add() {
