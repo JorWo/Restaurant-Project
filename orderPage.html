@@ -105,24 +105,31 @@
       xmlhttp.open("GET","foods.json",true);
       xmlhttp.send();
       
-      function clearOrder() {
-        
-      }
-      
       var amount1 = localStorage.getItem("item1");
       var amount2 = localStorage.getItem("item2");
       var amount3 = localStorage.getItem("item3");
       var amount4 = localStorage.getItem("item4");
       var amount5 = localStorage.getItem("item5");
       var amount6 = localStorage.getItem("item6");
-      
       document.getElementById('food1').innerHTML = amount1;
       document.getElementById('food2').innerHTML = amount2;
+      document.getElementById('food3').innerHTML = amount3;
+      document.getElementById('food4').innerHTML = amount4;
+      document.getElementById('food5').innerHTML = amount5;
+      document.getElementById('food6').innerHTML = amount6;
       
       var food1price = localStorage.getItem("price1");
       var food2price = localStorage.getItem("price2");
+      var food3price = localStorage.getItem("price3");
+      var food4price = localStorage.getItem("price4");
+      var food5price = localStorage.getItem("price5");
+      var food6price = localStorage.getItem("price6");
       document.getElementById('price1box').innerHTML = food1price;
       document.getElementById('price2box').innerHTML = food2price;
+      document.getElementById('price3box').innerHTML = food3price;
+      document.getElementById('price4box').innerHTML = food4price;
+      document.getElementById('price5box').innerHTML = food5price;
+      document.getElementById('price6box').innerHTML = food6price;
       </script>
   </body>
 </html>
