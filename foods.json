@@ -1,18 +1,46 @@
 {
   "food":[
     {
-    "name":"Char Siu Bao",
+    "name":"BBQ Pork Bun (Char Siu Bao)",
     "price":3.95,
-    "desc":"scrumptious steamed buns with char siu (roast pork) inside",
+    "desc":"scrumptious steamed buns with char siu (BBQ pork) inside",
     "amount":"3",
     "img": "url('http://www.chinesefoodrecipes.cc/wp-content/uploads/2016/05/chashaobao-rezept.jpg')"
     },
     {
-    "name":"Lo Mai Gai",
+    "name":"Mochi Rice in Lotus Leaf (Lo Mai Gai)",
     "price":4.95,
-    "desc":"",
-    "amount":"1",
+    "desc":"mochi rice with chicken and mushrooms wrapped in a lotus leaf",
+    "amount":"2",
     "img": "url('https://thewoksoflife.com/wp-content/uploads/2014/04/sticky-rice-lotus-leaf-22.jpg')"
+    },
+    {
+    "name":"Siu mai",
+    "price":3.50,
+    "desc":"pork hashes",
+    "amount":"3",
+    "img": "url('http://www.chinesefoodrecipes.cc/wp-content/uploads/2016/05/chashaobao-rezept.jpg')"
+    },
+    {
+    "name":"Har gaw",
+    "price":3.95,
+    "desc":"minced shrimp dumplings",
+    "amount":"3",
+    "img": "url('http://www.chinesefoodrecipes.cc/wp-content/uploads/2016/05/chashaobao-rezept.jpg')"
+    }
+    {
+    "name":"Shrimp Cheung Fun",
+    "price":5.95,
+    "desc":"rice rolls of shrimp",
+    "amount":"3",
+    "img": "url('http://www.chinesefoodrecipes.cc/wp-content/uploads/2016/05/chashaobao-rezept.jpg')"
+    }
+    {
+    "name":"Dann tat",
+    "price":3.50,
+    "desc":"Pork dumplings wrapped in yellow",
+    "amount":"3",
+    "img": "url('http://www.chinesefoodrecipes.cc/wp-content/uploads/2016/05/chashaobao-rezept.jpg')"
     }
   ]
 }
