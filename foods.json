@@ -10,14 +10,14 @@
     {
     "name":"Mochi Rice in Lotus Leaf (Lo Mai Gai)",
     "price":4.95,
-    "desc":"mochi rice with chicken and mushrooms wrapped in a lotus leaf",
+    "desc":"wrapped mochi rice with chicken and mushrooms in a lotus leaf",
     "amount":"2",
     "img": "url('https://thewoksoflife.com/wp-content/uploads/2014/04/sticky-rice-lotus-leaf-22.jpg')"
     },
     {
-    "name":"Siu mai",
+    "name":"Pork Hash (Siu mai)",
     "price":3.50,
-    "desc":"pork hashes",
+    "desc":"pork hashes wrapped in wonton",
     "amount":"3",
     "img": "url('http://www.chinesefoodrecipes.cc/wp-content/uploads/2016/05/chashaobao-rezept.jpg')"
     },
