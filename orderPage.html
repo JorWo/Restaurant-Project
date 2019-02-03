@@ -150,7 +150,17 @@ input[type="radio"]#control_05:checked + label {
   }
 }
 
+#finalSubmit {
+  background: white;
+  width:20%;
+  height:10%;
+  border:2px solid hsla(150, 75%, 50%, 1);
+  border-color:;
+  margin-left:40%;
+  font-weight:bold;
+  font-size: 24px;
 
+}
 
 #tipTitle {
   margin-top:15%;
@@ -241,6 +251,8 @@ input[type="radio"]#control_05:checked + label {
         else if (document.getElementById('control_03').checked) {
           document.getElementById('finalPriceBox').innerHTML = "Total w/ Tip: $" + (totalPrice * 1.2).toFixed(2);
         }
+        document.getElementById("finalSubmit").style.backgroundColor = "hsla(150, 75%, 50%, 1)";
+        document.getElementById("finalSubmit").style.color = "red";
         document.getElementById('finalSubmit').disabled = true;
         document.getElementById('control_01').disabled = true;
         document.getElementById('control_02').disabled = true;
