@@ -578,6 +578,8 @@
         window.food1name = food1name;
         var food1price = (mydata.food[0].price).toFixed(2);
         window.food1price = food1price;
+        var food1amount = mydata.food[0].amount;
+        window.food1amount = food1amount;
         document.getElementById('name1').innerHTML = mydata.food[0].name;
         document.getElementById('desc1').innerHTML = mydata.food[0].amount + " " + mydata.food[0].desc;
         document.getElementById('price1').innerHTML = "$" + (mydata.food[0].price).toFixed(2);
@@ -587,6 +589,8 @@
         window.food2name = food2name;
         var food2price = (mydata.food[1].price).toFixed(2);
         window.food2price = food2price;
+        var food2amount = mydata.food[1].amount;
+        window.food2amount = food2amount;
         document.getElementById('name2').innerHTML = mydata.food[1].name;
         document.getElementById('desc2').innerHTML = mydata.food[1].amount + " " + mydata.food[1].desc;
         document.getElementById('price2').innerHTML = "$" + (mydata.food[1].price).toFixed(2);
@@ -596,6 +600,8 @@
         window.food3name = food3name;
         var food3price = (mydata.food[2].price).toFixed(2);
         window.food3price = food3price;
+        var food3amount = mydata.food[2].amount;
+        window.food3amount = food3amount;
         document.getElementById('name3').innerHTML = mydata.food[2].name;
         document.getElementById('desc3').innerHTML = mydata.food[2].amount + " " + mydata.food[2].desc;
         document.getElementById('price3').innerHTML = "$" + (mydata.food[2].price).toFixed(2);
@@ -605,6 +611,8 @@
         window.food4name = food4name;
         var food4price = (mydata.food[3].price).toFixed(2);
         window.food4price = food4price;
+        var food4amount = mydata.food[3].amount;
+        window.food4amount = food4amount;
         document.getElementById('name4').innerHTML = mydata.food[3].name;
         document.getElementById('desc4').innerHTML = mydata.food[3].amount + " " + mydata.food[3].desc;
         document.getElementById('price4').innerHTML = "$" + (mydata.food[3].price).toFixed(2);
@@ -614,6 +622,8 @@
         window.food5name = food5name;
         var food5price = (mydata.food[4].price).toFixed(2);
         window.food5price = food5price;
+        var food5amount = mydata.food[4].amount;
+        window.food5amount = food5amount;
         document.getElementById('name5').innerHTML = mydata.food[4].name;
         document.getElementById('desc5').innerHTML = mydata.food[4].amount + " " + mydata.food[4].desc;
         document.getElementById('price5').innerHTML = "$" + (mydata.food[4].price).toFixed(2);
@@ -623,6 +633,8 @@
         window.food6name = food6name;
         var food6price = (mydata.food[5].price).toFixed(2);
         window.food6price = food6price;
+        var food6amount = mydata.food[5].amount;
+        window.food6amount = food6amount;
         document.getElementById('name6').innerHTML = mydata.food[5].name;
         document.getElementById('desc6').innerHTML = mydata.food[5].amount + " " + mydata.food[5].desc;
         document.getElementById('price6').innerHTML = "$" + (mydata.food[5].price).toFixed(2);
@@ -636,7 +648,7 @@
         quantity1++;
         document.getElementById("amount1").innerHTML = quantity1;
         if (quantity1 => 1) {
-          var foodWithAmount1 = document.getElementById('food1order').innerHTML = quantity1 + " x " + food1name;
+          var foodWithAmount1 = document.getElementById('food1order').innerHTML = quantity1 + " x " + food1amount + " " + food1name;
           var foodTotalPrice1 = "$" + (quantity1 * food1price).toFixed(2);
           localStorage.setItem('item1',foodWithAmount1);
           localStorage.setItem('price1',foodTotalPrice1);
@@ -649,7 +661,7 @@
         if (quantity1 !== 0) {
         quantity1--;
         document.getElementById("amount1").innerHTML = quantity1;
-        var foodWithAmount1 = document.getElementById('food1order').innerHTML = quantity1 + " x " + food1name;
+        var foodWithAmount1 = document.getElementById('food1order').innerHTML = quantity1 + " x " + food1amount + " " + food1name;
         var foodTotalPrice1 = "$" + (quantity1 * food1price).toFixed(2);
         localStorage.setItem('item1',foodWithAmount1);
         localStorage.setItem('price1',foodTotalPrice1);
@@ -662,7 +674,7 @@
         quantity2++;
         document.getElementById("amount2").innerHTML = quantity2;
         if (quantity2 => 1) {
-        var foodWithAmount2 = document.getElementById('food2order').innerHTML = quantity2 + " x " + food2name;
+        var foodWithAmount2 = document.getElementById('food2order').innerHTML = quantity2 + " x " + food2amount + " " + food2name;
         var foodTotalPrice2 = "$" + (quantity2 * food2price).toFixed(2);
         localStorage.setItem('item2',foodWithAmount2);
         localStorage.setItem('price2',foodTotalPrice2);
@@ -675,7 +687,7 @@
         if (quantity2 !== 0) {
         quantity2--;
         document.getElementById("amount2").innerHTML = quantity2;
-        var foodWithAmount2 = document.getElementById('food2order').innerHTML = quantity2 + " x " + food2name;
+        var foodWithAmount2 = document.getElementById('food2order').innerHTML = quantity2 + " x " + food2amount + " " + food2name;
         var foodTotalPrice2 = "$" + (quantity2 * food2price).toFixed(2);
         localStorage.setItem('item2',foodWithAmount2);
         localStorage.setItem('price2',foodTotalPrice2);
@@ -688,7 +700,7 @@
         quantity3++;
         document.getElementById("amount3").innerHTML = quantity3;
         if (quantity3 => 1) {
-        var foodWithAmount3 = document.getElementById('food3order').innerHTML = quantity3 + " x " + food3name;
+        var foodWithAmount3 = document.getElementById('food3order').innerHTML = quantity3 + " x " + food3amount + " " + food3name;
         var foodTotalPrice3 = "$" + (quantity3 * food3price).toFixed(2);
         localStorage.setItem('item3',foodWithAmount3);
         localStorage.setItem('price3',foodTotalPrice3);
@@ -701,7 +713,7 @@
         if (quantity3 !== 0) {
         quantity3--;
         document.getElementById("amount3").innerHTML = quantity3;
-        var foodWithAmount3 = document.getElementById('food3order').innerHTML = quantity3 + " x " + food3name;
+        var foodWithAmount3 = document.getElementById('food3order').innerHTML = quantity3 + " x " + food3amount + " " + food3name;
         var foodTotalPrice3 = "$" + (quantity3 * food3price).toFixed(2);
         localStorage.setItem('item3',foodWithAmount3);
         localStorage.setItem('price3',foodTotalPrice3);
@@ -714,7 +726,7 @@
         quantity4++;
         document.getElementById("amount4").innerHTML = quantity4;
         if (quantity4 => 1) {
-        var foodWithAmount4 = document.getElementById('food4order').innerHTML = quantity4 + " x " + food4name;
+        var foodWithAmount4 = document.getElementById('food4order').innerHTML = quantity4 + " x " + food4amount + " " + food4name;
         var foodTotalPrice4 = "$" + (quantity4 * food4price).toFixed(2);
         localStorage.setItem('item4',foodWithAmount4);
         localStorage.setItem('price4',foodTotalPrice4);
@@ -727,7 +739,7 @@
         if (quantity4 !== 0) {
         quantity4--;
         document.getElementById("amount4").innerHTML = quantity4;
-        var foodWithAmount4 = document.getElementById('food4order').innerHTML = quantity4 + " x " + food4name;
+        var foodWithAmount4 = document.getElementById('food4order').innerHTML = quantity4 + " x " + food4amount + " " + food4name;
         var foodTotalPrice4 = "$" + (quantity4 * food4price).toFixed(2);
         localStorage.setItem('item4',foodWithAmount4);
         localStorage.setItem('price4',foodTotalPrice4);
@@ -740,7 +752,7 @@
         quantity5++;
         document.getElementById("amount5").innerHTML = quantity5;
         if (quantity5 => 1) {
-        var foodWithAmount5 = document.getElementById('food5order').innerHTML = quantity5 + " x " + food5name;
+        var foodWithAmount5 = document.getElementById('food5order').innerHTML = quantity5 + " x " + food5amount + " " + food5name;
         var foodTotalPrice5 = "$" + (quantity5 * food5price).toFixed(2);
         localStorage.setItem('item5',foodWithAmount5);
         localStorage.setItem('price5',foodTotalPrice5);
@@ -753,7 +765,7 @@
         if (quantity5 !== 0) {
         quantity5--;
         document.getElementById("amount5").innerHTML = quantity5;
-        var foodWithAmount5 = document.getElementById('food5order').innerHTML = quantity5 + " x " + food5name;
+        var foodWithAmount5 = document.getElementById('food5order').innerHTML = quantity5 + " x " + food5amount + " " + food5name;
         var foodTotalPrice5 = "$" + (quantity5 * food5price).toFixed(2);
         localStorage.setItem('item5',foodWithAmount5);
         localStorage.setItem('price5',foodTotalPrice5);
@@ -766,7 +778,7 @@
         quantity6++;
         document.getElementById("amount6").innerHTML = quantity6;
         if (quantity6 => 1) {
-        var foodWithAmount6 = document.getElementById('food6order').innerHTML = quantity6 + " x " + food6name;
+        var foodWithAmount6 = document.getElementById('food6order').innerHTML = quantity6 + " x " + food6amount + " " + food6name;
         var foodTotalPrice6 = "$" + (quantity6 * food6price).toFixed(2);
         localStorage.setItem('item6',foodWithAmount6);
         localStorage.setItem('price6',foodTotalPrice6);
@@ -779,7 +791,7 @@
         if (quantity6 !== 0) {
         quantity6--;
         document.getElementById("amount6").innerHTML = quantity6;
-        var foodWithAmount6 = document.getElementById('food6order').innerHTML = quantity6 + " x " + food6name;
+        var foodWithAmount6 = document.getElementById('food6order').innerHTML = quantity6 + " x " + food6amount + " " + food6name;
         var foodTotalPrice6 = "$" + (quantity6 * food6price).toFixed(2);
         localStorage.setItem('item6',foodWithAmount6);
         localStorage.setItem('price6',foodTotalPrice6);
