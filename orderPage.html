@@ -220,7 +220,8 @@ input[type="radio"]#control_05:checked + label {
       
       var totalPrice = localStorage.getItem("totalTaxPrice");
       document.getElementById('totalPriceBox').innerHTML = "Total w/ Tax: $" + totalPrice;
-      
+      document.getElementById('finalPriceBox').innerHTML = "Total w/ Tip: $" + totalPrice;
+       
       for (i=0;i<=10;i++) {
 
         if (document.getElementsByName('select')[1].checked) {
