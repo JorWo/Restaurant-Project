@@ -226,27 +226,18 @@ input[type="radio"]#control_05:checked + label {
       function finalizeTip() {
         if (document.getElementById('control_01').checked) {
           document.getElementById('finalPriceBox').innerHTML = "Total w/ Tip: $" + (totalPrice * 1.1).toFixed(2);
-          document.getElementById('finalSubmit').disabled = true;
-          document.getElementById('control_01').disabled = true;
-          document.getElementById('control_02').disabled = true;
-          document.getElementById('control_03').disabled = true;
         }
         else if (document.getElementById('control_02').checked) {
           document.getElementById('finalPriceBox').innerHTML = "Total w/ Tip: $" + (totalPrice * 1.15).toFixed(2);
-          document.getElementById('finalSubmit').disabled = true;
-          document.getElementById('control_01').disabled = true;
-          document.getElementById('control_02').disabled = true;
-          document.getElementById('control_03').disabled = true;
         }
         else if (document.getElementsById('control_03').checked) {
           document.getElementById('finalPriceBox').innerHTML = "Total w/ Tip: $" + (totalPrice * 1.2).toFixed(2);
-          document.getElementById('finalSubmit').disabled = true;
-          document.getElementById('control_01').disabled = true;
-          document.getElementById('control_02').disabled = true;
-          document.getElementById('control_03').disabled = true;
+        }
+        document.getElementById('finalSubmit').disabled = true;
+        document.getElementById('control_01').disabled = true;
+        document.getElementById('control_02').disabled = true;
+        document.getElementById('control_03').disabled = true;
       }
-    }
-       
       
       </script>
   </body>
