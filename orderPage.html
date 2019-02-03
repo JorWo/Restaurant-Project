@@ -252,11 +252,17 @@ input[type="radio"]#control_05:checked + label {
           document.getElementById('finalPriceBox').innerHTML = "Total w/ Tip: $" + (totalPrice * 1.2).toFixed(2);
         }
         document.getElementById("finalSubmit").style.backgroundColor = "hsla(150, 75%, 50%, 1)";
-        document.getElementById("finalSubmit").style.color = "red";
+        document.getElementById("finalSubmit").style.color = "black";
+        document.getElementById("finalSubmit").innerHTML = "Thank You!";
         document.getElementById('finalSubmit').disabled = true;
         document.getElementById('control_01').disabled = true;
         document.getElementById('control_02').disabled = true;
         document.getElementById('control_03').disabled = true;
+        setTimeout(orderMore, 2500);
+      }
+      
+      function orderMore() {
+        location.href="index.html";
       }
       
       </script>
