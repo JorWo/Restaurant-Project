@@ -81,6 +81,73 @@
         position:relative;
       }
       
+      section {
+  display: flex;
+  flex-flow: row wrap;
+}
+section > div {
+  flex: 1;
+  padding: 0.5rem;
+}
+input[type="radio"] {
+  display: none;
+  &:not(:disabled) ~ label {
+    cursor: pointer;
+  }
+  &:disabled ~ label {
+    color: hsla(150, 5%, 75%, 1);
+    border-color: hsla(150, 5%, 75%, 1);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+label {
+  height: 30%;
+  display: block;
+  background: white;
+  border: 2px solid hsla(150, 75%, 50%, 1);
+  border-radius: 20px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin: 1rem;
+  text-align: center;
+  box-shadow: 0px 3px 10px -2px hsla(150, 5%, 65%, 0.5);
+  position: relative;
+}
+input[type="radio"]:checked + label {
+  background: hsla(150, 75%, 50%, 1);
+  color: hsla(215, 0%, 100%, 1);
+  box-shadow: 0px 0px 20px hsla(150, 100%, 50%, 0.75);
+  &::after {
+    color: hsla(215, 5%, 25%, 1);
+    font-family: FontAwesome;
+    border: 2px solid hsla(150, 75%, 45%, 1);
+    content: "\f00c";
+    font-size: 24px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0px 2px 5px -2px hsla(0, 0%, 0%, 0.25);
+  }
+}
+input[type="radio"]#control_05:checked + label {
+  background: red;
+  border-color: red;
+}
+
+@media only screen and (max-width: 700px) {
+  section {
+    flex-direction: column;
+  }
+}
+
     </style>
   </head>
   <body>
@@ -95,8 +162,34 @@
       <p id ="food4">1 x Har Gow</p><p id = "price4box">$3.95</p>
       <p id ="food5">1 x Chee Cheung Fun</p><p id = "price5box">$5.95</p>
       <p id ="food6">1 x Dan Tat</p><p id = "price6box">$4.95</p>
-      <h1 id ="totalPriceBox">Total Price: $200</h1>
+      <h1 id ="totalPriceBox">Total w/ Tax: $200</h1>
+      
+      <h1 id="tipTitle">Select Tip</h1>
+    <section>
+<div>
+  <input type="radio" id="control_01" name="select" value="1">
+  <label for="control_01">
+    <h2>10% Tip</h2>
+  </label>
+</div>
+<div>
+  <input type="radio" id="control_02" name="select" value="2">
+  <label for="control_02">
+    <h2>15% Tip</h2>
+  </label>
+</div>
+<div>
+  <input type="radio" id="control_03" name="select" value="3">
+  <label for="control_03">
+    <h2>20% Tip</h2>
+  </label>
+</div>
+</section>
+<h1 id="finalPriceBox">Total w/ Tip: $0.00</h1>
     </div>
+    
+    
+
     <script>
 
       var amount1 = localStorage.getItem("item1");
@@ -126,7 +219,20 @@
       document.getElementById('price6box').innerHTML = food6price;
       
       var totalPrice = localStorage.getItem("totalTaxPrice");
-      document.getElementById('totalPriceBox').innerHTML = "Total Price w/ Tax: $" + totalPrice;
+      document.getElementById('totalPriceBox').innerHTML = "Total w/ Tax: $" + totalPrice;
+      
+      for (var i=0;i<=10;i++) {
+        if ((document.getElementById('control_01').checked) == true) {
+          document.getElementById('finalPriceBox').innerHTML = "Total w/ Tip: $" + totalPrice * 1.1;
+        }
+        else if ((document.getElementById('control_02').checked) == true) {
+          document.getElementById('finalPriceBox').innerHTML = "Total w/ Tip: $" + totalPrice * 1.15;
+        }
+        else if ((document.getElementById('control_03').checked) == true) {
+          document.getElementById('finalPriceBox').innerHTML = "Total w/ Tip: $" + totalPrice * 1.2;
+      }
+    }
+        
       
       </script>
   </body>
